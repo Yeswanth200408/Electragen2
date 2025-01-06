@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectraGen</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        /* Landing Page Section */
+        .landing {
+            position: relative;
+            text-align: center;
+            color: white;
+            height: 100vh;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), 
+                        url('https://via.placeholder.com/1500') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .landing h1 {
+            font-size: 4rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .landing p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .landing .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #ff5722;
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            animation: bounce 4s infinite;
+        }
+
+        .landing .btn:hover {
+            background-color: #e64a19;
+        }
+
+        /* About Section */
+        #about {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        #about h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #about .content {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        #about .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #about .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .landing h1 {
+                font-size: 2.5rem;
+            }
+
+            .landing p {
+                font-size: 1rem;
+            }
+
+            .landing .btn {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Landing Section -->
+    <section class="landing">
+        <h1>Empowering The Future With Reliable Energy Solutions</h1>
+        <p>Welcome to <strong>ElectraGen</strong>, where innovation meets sustainability.</p>
+        <a href="#about" class="btn">Discover More</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h1>About Us</h1>
+        <div class="content">
+            <h3>Empowering the Future with Reliable Energy Solutions</h3>
+            <p>At <b>ElectraGen</b>, we are a team of innovators, engineers, and visionaries dedicated to revolutionizing the energy industry. 
+                <b>All. The. Time.</b><br>
+                With our combined expertise, we deliver sustainable, efficient, and tailored energy solutions that power businesses and communities across the globe.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </section>
+
+</body>
+</html>
