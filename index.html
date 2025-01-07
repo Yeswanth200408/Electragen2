@@ -20,12 +20,42 @@
     <script src="./js/main.js"></script>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"><img src="./images/image.png" alt=""></a>
-        <h3 style="font-family: 'Brush Script MT', cursive; font-size: 4em; font-weight:lighter; color: aqua; text-transform: uppercase;">Electra Gen</h3>
+    <style>
+        .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #003366; /* Dark blue color from your screenshot */
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    height: 70px; /* Fixed height for header */
+}
 
+.header .logo {
+    display: flex;
+
+}
+
+.header .logo img {
+    height: 100px; /* Adjust this value based on your logo */
+    width: auto;
+    object-fit: contain;
+}
+.col-lg-4 col-sm-6:hover{
+    
+}
+
+    </style>
+   
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="./images/logo.png" alt="Company Logo">
+        </a>
         <div class="fas fa-bars"></div>
-       
         <nav class="navbar">
             <ul>
                 <li><a href="#home">home</a></li>
@@ -135,20 +165,20 @@
           <div class="item"> <span class="icon feature_box_col_four"><i class="fa fa-database"></i></span>
             <h6>Project-1</h6>
             
-            <p>SHORE ENERGY<br>Generation of electricity by using the river sand<br><br></p>
+            <p><strong>SHORE ENERGY</strong><br>Generation of electricity by using the river sand<br><br></p>
           </div>
         </div>
         
         <div class="col-lg-4 col-sm-6">
           <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-upload"></i></span>
             <h6>Project-2</h6>
-            <p>SMART ENERGY METER<br>Reducing the consumption and wastage of electricity by using technology<br><br></p>
+            <p><strong>SMART ENERGY METER</strong><br>Reducing the consumption and wastage of electricity by using technology<br><br></p>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6">
           <div class="item"> <span class="icon feature_box_col_six"><i class="fa fa-camera"></i></span>
             <h6>Project-3</h6>
-            <p>Lofoo<br>Helping street vendors by connecting them online<br><br></p>
+            <p><strong>Lofoo</strong><br>Helping street vendors by connecting them online<br><br></p>
           </div>
         </div>
       </div>
@@ -241,25 +271,6 @@
     </div>
 </div>
 
-<div class="clients mt-100">
-    <div class="container">
-        <div class="section-header">
-            <h2>Our Clients</h2>
-            <p>
-                We don't just build softwares, we build your business.
-            </p>
-        </div>
-        <div class="owl-carousel clients-carousel">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-            <img src="./images/image.png" alt="Client Logo">
-        </div>
-    </div>
 </div>
 <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
 <script src="lib/jquery/jquery.min.js"></script>
