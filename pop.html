@@ -1,0 +1,51 @@
+<form action="lib/load.php" method="post" enctype="multipart/form-data" onsubmit="return submitForm(this)">
+    <input type="text" name="name" placeholder="Full Name" required><br>
+    <input type="text" name="mobile" placeholder="Mobile Number" required><br>
+    <input type="email" name="email" placeholder="Email Address" required><br>
+    <input type="file" name="file" accept=".pdf" required><br>
+    <input type="text" name="position" placeholder="Position" required><br>
+    <textarea name="others" placeholder="Additional Information"></textarea><br>
+    <input type="number" name="experience" placeholder="Years of Experience" required><br>
+    <button type="submit">Submit</button>
+</form>
+
+<!-- Success/Error message pop-up -->
+<div id="messageBox" style="display:none;">
+    <div id="message"></div>
+    <button onclick="document.getElementById('messageBox').style.display='none';">Close</button>
+</div>
+
+<script>
+function submitForm(form) {
+    // Create a FormData object to handle the form submission
+    var formData = new FormData(form);
+    
+    // Send the form data to the server using fetch
+    fetch('submit.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())  // Get the response text from PHP
+    .then(result => {
+        if (result === 'Success') {
+            // If PHP returns "Success", show success message
+            showMessage("Your resume has been successfully uploaded!");
+        } else {
+            // If PHP returns an error message, show failure message
+            showMessage(result);
+        }
+    })
+    .catch(error => {
+        // If there is a fetch error, show an error message
+        showMessage("Error submitting the form: " + error);
+    });
+
+    // Prevent form from submitting the traditional way (page reload)
+    return false;
+}
+
+function showMessage(message) {
+    document.getElementById('message').innerText = message;
+    document.getElementById('messageBox').style.display = 'block';
+}
+</script>
